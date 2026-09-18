@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="PokedexMaui.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Pokédex móvil"
+    BackgroundColor="#F4F7FA">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="16">
+            <Label Text="Pokédex móvil" FontSize="30" FontAttributes="Bold" TextColor="#17365D" />
+            <Label Text="Consulte por nombre o número" FontSize="15" TextColor="#52616B" />
+
+            <Grid ColumnDefinitions="*, Auto" ColumnSpacing="10">
+                <Entry x:Name="SearchEntry" 
+                       Grid.Column="0" 
+                       Placeholder="Ejemplo: pikachu o 25" 
+                       ReturnType="Search" 
+                       Completed="OnSearchClicked" />
+                <Button Grid.Column="1" 
+                        Text="Buscar" 
+                        Clicked="OnSearchClicked" 
+                        BackgroundColor="#2F75B5" 
+                        TextColor="White" />
+            </Grid>
+
+            <ActivityIndicator x:Name="LoadingIndicator" 
+                               IsVisible="False" 
+                               IsRunning="False" 
+                               Color="#2F75B5" />
+
+            <Label x:Name="MessageLabel" 
+                   IsVisible="False" 
+                   TextColor="#842318" />
+
+            <Border x:Name="ResultCard" 
+                    IsVisible="False" 
+                    BackgroundColor="White" 
+                    Stroke="#D5DEE8" 
+                    StrokeThickness="1" 
+                    Padding="20">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="18" />
+                </Border.StrokeShape>
+
+                <VerticalStackLayout Spacing="10">
+                    <Image x:Name="PokemonImage" HeightRequest="190" Aspect="AspectFit" />
+                    <Label x:Name="NameLabel" HorizontalTextAlignment="Center" FontSize="25" FontAttributes="Bold" TextColor="#17365D" />
+                    <Label x:Name="IdLabel" HorizontalTextAlignment="Center" TextColor="#52616B" />
+
+                    <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*,*" RowSpacing="8" ColumnSpacing="12">
+                        <Label Grid.Row="0" Grid.Column="0" x:Name="TypeLabel" />
+                        <Label Grid.Row="0" Grid.Column="1" x:Name="ExperienceLabel" />
+                        <Label Grid.Row="1" Grid.Column="0" x:Name="HeightLabel" />
+                        <Label Grid.Row="1" Grid.Column="1" x:Name="WeightLabel" />
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
