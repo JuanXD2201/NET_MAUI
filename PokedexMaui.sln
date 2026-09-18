@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37531.7 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokedexMaui", "PokedexMaui\PokedexMaui.csproj", "{06C6BFEF-8595-406A-86FA-7A6EDE6FDDEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehiclesMaui", "VehiclesMaui\VehiclesMaui.csproj", "{6F87672A-91CC-49D9-B443-3B20AD2A4BD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06C6BFEF-8595-406A-86FA-7A6EDE6FDDEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06C6BFEF-8595-406A-86FA-7A6EDE6FDDEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06C6BFEF-8595-406A-86FA-7A6EDE6FDDEF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{06C6BFEF-8595-406A-86FA-7A6EDE6FDDEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06C6BFEF-8595-406A-86FA-7A6EDE6FDDEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F87672A-91CC-49D9-B443-3B20AD2A4BD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F87672A-91CC-49D9-B443-3B20AD2A4BD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F87672A-91CC-49D9-B443-3B20AD2A4BD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F87672A-91CC-49D9-B443-3B20AD2A4BD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77746D49-A3E6-440D-879D-64CA2D0B9F5E}
+	EndGlobalSection
+EndGlobal
