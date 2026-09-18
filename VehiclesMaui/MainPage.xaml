@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="VehiclesMaui.MainPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="NHTSA Vehicles"
+             BackgroundColor="#F4F7FA">
+
+    <Grid RowDefinitions="Auto, *">
+        <SearchBar x:Name="FilterSearchBar" 
+                   Grid.Row="0"
+                   Placeholder="Filtrar marca..." 
+                   TextChanged="OnFilterTextChanged"
+                   Margin="10" />
+
+        <ActivityIndicator x:Name="LoadingIndicator"
+                           Grid.Row="1"
+                           IsVisible="True"
+                           IsRunning="True"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Color="#2F75B5" />
+
+        <CollectionView x:Name="VehiclesCollection" 
+                        Grid.Row="1" 
+                        Margin="10"
+                        IsVisible="False">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Stroke="#D5DEE8" StrokeThickness="1" Margin="0,5" Padding="15">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="8" />
+                        </Border.StrokeShape>
+                        <VerticalStackLayout>
+                            <Label Text="{Binding MakeName}" FontAttributes="Bold" FontSize="16" TextColor="#17365D" />
+                            <Label Text="{Binding MakeId, StringFormat='ID: {0}'}" FontSize="12" TextColor="#52616B" />
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
